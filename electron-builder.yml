@@ -1,0 +1,45 @@
+appId: com.seppulcro.comms
+productName: Comms
+asar: true
+asarUnpack:
+  - node_modules/uiohook-napi/**/*
+directories:
+  output: release
+  buildResources: electron/icons
+
+files:
+  - electron/main.js
+  - electron/preload.js
+  - client/app.html
+  - client/style.css
+  - client/dist/**/*
+  - node_modules/uiohook-napi/**/*
+  - "!node_modules/uiohook-napi/build"
+
+extraResources:
+  - from: electron/icons/
+    to: icons/
+
+mac:
+  category: public.app-category.social-networking
+  icon: electron/icons/icon.icns
+  target:
+    - dmg
+    - zip
+
+win:
+  icon: electron/icons/icon.ico
+  target:
+    - nsis
+    - portable
+
+linux:
+  category: Network
+  icon: electron/icons
+  target:
+    - AppImage
+    - deb
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true

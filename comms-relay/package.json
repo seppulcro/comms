@@ -1,0 +1,14 @@
+{
+  "name": "comms-relay",
+  "version": "0.0.1",
+  "description": "Lightweight WebRTC signaling relay for Comms — self-hostable",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun --hot index.ts",
+    "test": "bun test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

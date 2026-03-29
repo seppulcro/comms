@@ -1,0 +1,26 @@
+node_modules/
+data/
+client/dist/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.env
+.DS_Store
+
+# Electron build output
+electron/main.js
+electron/preload.js
+release/
+
+# OS files
+Thumbs.db
+
+# Editor files
+*.log
+*.swp
+*.swo
+.vscode/
+.idea/
+.claude.md
+.claude/

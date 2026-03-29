@@ -1,0 +1,44 @@
+{
+  "name": "comms",
+  "version": "0.0.1",
+  "description": "P2P voice chat with push-to-talk, markdown chat, and screen sharing",
+  "author": {
+    "name": "seppulcro",
+    "email": "seppulcro@users.noreply.github.com"
+  },
+  "homepage": "https://github.com/seppulcro/comms",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seppulcro/comms.git"
+  },
+  "keywords": ["p2p", "webrtc", "voice-chat", "electron", "e2e-encrypted", "foss", "discord-alternative"],
+  "license": "AGPL-3.0-only",
+  "private": true,
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "bun run scripts/dev.ts",
+    "build": "bun run scripts/build.ts",
+    "start": "electron .",
+    "dist": "bun run build && electron-builder",
+    "dist:linux": "bun run build && electron-builder --linux",
+    "dist:mac": "bun run build && electron-builder --mac",
+    "dist:win": "bun run build && electron-builder --win"
+  },
+  "dependencies": {
+    "dompurify": "^3.3.3",
+    "uiohook-napi": "^1.5.5"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@webtui/css": "^0.1",
+    "@webtui/plugin-nf": "^0.1.2",
+    "@webtui/theme-catppuccin": "^0.0",
+    "electron": "^41.1.0",
+    "electron-builder": "^26",
+    "marked": "^15",
+    "preact": "^10"
+  },
+  "trustedDependencies": [
+    "uiohook-napi"
+  ]
+}
