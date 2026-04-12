@@ -11,7 +11,15 @@
     "type": "git",
     "url": "https://github.com/seppulcro/comms.git"
   },
-  "keywords": ["p2p", "webrtc", "voice-chat", "electron", "e2e-encrypted", "foss", "discord-alternative"],
+  "keywords": [
+    "p2p",
+    "webrtc",
+    "voice-chat",
+    "electron",
+    "e2e-encrypted",
+    "foss",
+    "discord-alternative"
+  ],
   "license": "AGPL-3.0-only",
   "private": true,
   "main": "electron/main.js",
@@ -22,13 +30,16 @@
     "dist": "bun run build && electron-builder",
     "dist:linux": "bun run build && electron-builder --linux",
     "dist:mac": "bun run build && electron-builder --mac",
-    "dist:win": "bun run build && electron-builder --win"
+    "dist:win": "bun run build && electron-builder --win",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "dompurify": "^3.3.3",
     "uiohook-napi": "^1.5.5"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "@types/bun": "latest",
     "@webtui/css": "^0.1",
     "@webtui/plugin-nf": "^0.1.2",

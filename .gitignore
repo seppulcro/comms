@@ -13,6 +13,10 @@ electron/main.js
 electron/preload.js
 release/
 
+# Playwright
+playwright-report/
+test-results/
+
 # OS files
 Thumbs.db
 
@@ -20,7 +24,6 @@ Thumbs.db
 *.log
 *.swp
 *.swo
-.vscode/
 .idea/
 .claude.md
 .claude/

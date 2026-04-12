@@ -6,6 +6,10 @@
 
 > P2P voice + text chat. End-to-end encrypted. No servers required.
 
+[![Release](https://img.shields.io/github/v/release/seppulcro/comms?style=flat-square)](https://github.com/seppulcro/comms/releases)
+[![CI](https://img.shields.io/github/actions/workflow/status/seppulcro/comms/ci.yml?style=flat-square&label=CI)](https://github.com/seppulcro/comms/actions)
+[![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue?style=flat-square)](./LICENSE)
+
 A FOSS Discord alternative that runs entirely peer-to-peer. Host a room from
 your desktop app — others join with an invite code. All communication flows
 directly between peers via WebRTC. A lightweight signaling relay brokers
@@ -175,13 +179,16 @@ Then open `http://localhost:3333/?mock` in your browser. The `?mock` query param
 
 ### Roadmap
 
-- **Community relay registry** — Public list of community-hosted relays, pick the closest one or self-host your own
-- **One-click relay deploy** — Docker image + deploy buttons (Railway, Fly.io)
-- **PEX** — Peer exchange for relay-free mesh
-- **Channels** — Multiple text/voice channels per room
-- **File sharing** — Over DataChannels
-- **TURN fallback** — For restrictive NATs / IP privacy
-- **Mobile** — Capacitor / PWA
+See [TODO.md](TODO.md) for milestones and `.planning/ROADMAP.md` for the detailed phased plan.
+
+| Phase | Goal |
+|-------|------|
+| 1 | Transport Abstraction & Identity |
+| 2 | GPS & File Sharing |
+| 3 | Service Bridging |
+| 4 | Mesh Interop (Reticulum/LXMF) |
+| 5 | Attestation & Gated Rooms |
+| 6 | Mobile (iOS/Android via Capacitor) |
 
 ## Why Electron?
 
